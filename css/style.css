@@ -5,13 +5,19 @@ body {
   padding: 0;
   background-color: #fff;
   color: #333;
-  overflow-x: auto; /* allows horizontal scroll on very small screens */
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
 }
 
 /* HEADER */
 header {
-  background-color: #fff; /* White background */
-  padding: 20px 40px;
+  background-color: #fff;
+  padding: 20px 0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
@@ -22,25 +28,22 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: nowrap; /* prevents items from wrapping on smaller screens */
+  flex-wrap: wrap;
 }
 
 header .logo h1 {
-  font-size: 28px;
+  font-size: 2rem;
   color: #b22222; /* Dark Crimson */
   margin: 0;
-  white-space: nowrap; /* prevents logo from wrapping */
 }
 
 header nav ul.nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 2rem;
   margin: 0;
   padding: 0;
-  flex-wrap: nowrap; /* prevents nav links from stacking */
+  flex-wrap: wrap;
 }
 
 header nav ul.nav-links li a {
@@ -48,56 +51,102 @@ header nav ul.nav-links li a {
   color: #333;
   font-weight: 500;
   transition: color 0.3s;
-  white-space: nowrap; /* prevents link text wrapping */
 }
 
 header nav ul.nav-links li a:hover {
-  color: #ff4500; /* Rich orange hover */
+  color: #ff4500;
 }
 
 header .cta {
   display: flex;
   align-items: center;
-  gap: 20px;
-  flex-wrap: nowrap; /* keeps phone and button in one row */
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 header .phone {
   font-weight: bold;
-  color: #b22222; /* Dark Crimson */
-  white-space: nowrap;
+  color: #b22222;
 }
 
 header .btn-login {
-  padding: 8px 16px;
-  background: linear-gradient(45deg, #ff4500, #ffbf00); /* Orange → Golden amber */
+  padding: 0.5rem 1rem;
+  background: linear-gradient(45deg, #ff4500, #ffbf00);
   color: white;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   transition: opacity 0.3s;
-  white-space: nowrap;
 }
 
 header .btn-login:hover {
   opacity: 0.85;
 }
 
-/* MAIN SECTION */
-main {
-  padding: 40px;
+/* HERO SECTION */
+.hero {
+  padding: 4rem 0;
   text-align: center;
 }
 
-main h2 {
-  font-size: 32px;
-  color: #b22222; /* Dark Crimson */
-  white-space: nowrap;
+.hero h2 {
+  font-size: 2rem;
+  color: #b22222;
+  margin-bottom: 1rem;
 }
 
-main p {
-  font-size: 18px;
-  margin-top: 15px;
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: linear-gradient(45deg, #ff4500, #ffbf00);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.btn-hero:hover {
+  opacity: 0.85;
+}
+
+/* SERVICES SECTION */
+.services {
+  display: flex;
+  gap: 2rem;
+  margin: 4rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-block {
+  flex: 1 1 300px;
+  background: #fff5f0;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.service-block h3 {
+  color: #b22222;
+  margin-bottom: 1rem;
+}
+
+.service-block a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #ff4500;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.service-block a:hover {
+  text-decoration: underline;
 }
 
 /* FOOTER */
@@ -105,5 +154,14 @@ footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 15px 0;
+  padding: 1.5rem 0;
+}
+
+footer a {
+  color: #ffbf00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
