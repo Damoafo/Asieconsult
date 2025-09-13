@@ -19,20 +19,33 @@ a {
   align-items: center;
   padding: 1rem 2rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
+  flex-wrap: wrap;
   background: #fff;
-  z-index: 100;
 }
 
-.header-container .logo img {
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
   height: 50px;
+}
+
+.logo .company-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #b22222;
 }
 
 nav ul {
   display: flex;
   gap: 2rem;
   list-style: none;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
@@ -89,7 +102,7 @@ nav ul li a:hover {
 }
 
 .service-card {
-  flex: 1 1 280px;
+  flex: 1 1 45%; /* responsive width */
   max-width: 400px;
   text-align: center;
   padding: 2rem;
@@ -167,5 +180,12 @@ footer a:hover {
   }
   .hero p {
     font-size: 1rem;
+  }
+  .service-card {
+    flex: 1 1 100%; /* stack on small screens */
+  }
+  nav ul {
+    justify-content: center;
+    gap: 1rem;
   }
 }
