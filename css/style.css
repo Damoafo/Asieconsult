@@ -69,24 +69,26 @@ header .phone {
   color: #b22222;
 }
 
+/* LOGIN BUTTON - MINIMAL PROFESSIONAL STYLE */
 header .btn-login {
   padding: 0.5rem 1.5rem;
-  background: linear-gradient(135deg, #b22222, #ff4500);
+  background-color: #b22222;
   color: white;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 4px;
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border: 2px solid #b22222;
   transition: all 0.3s ease;
 }
 
 header .btn-login:hover {
-  background: linear-gradient(135deg, #ff4500, #b22222);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  background-color: white;
+  color: #b22222;
+  border-color: #b22222;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transform: translateY(-2px);
-  opacity: 0.95;
 }
 
 /* HERO SECTION */
@@ -106,26 +108,27 @@ header .btn-login:hover {
   margin-bottom: 2rem;
 }
 
-/* HERO BUTTON - PROFESSIONAL STYLE */
+/* HERO BUTTON - MINIMAL PROFESSIONAL STYLE */
 .btn-hero {
   display: inline-block;
-  padding: 0.75rem 2.5rem;
-  background: linear-gradient(135deg, #b22222, #ff4500);
+  padding: 0.75rem 2rem;
+  background-color: #b22222; /* Dark Crimson */
   color: white;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 4px;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border: 2px solid #b22222;
   transition: all 0.3s ease;
 }
 
 .btn-hero:hover {
-  background: linear-gradient(135deg, #ff4500, #b22222);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  background-color: white;
+  color: #b22222;
+  border-color: #b22222;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transform: translateY(-2px);
-  opacity: 0.95;
 }
 
 /* SERVICES SECTION */
@@ -150,26 +153,28 @@ header .btn-login:hover {
   margin-bottom: 1rem;
 }
 
+/* SERVICE BUTTONS - MATCH HERO BUTTON STYLE */
 .service-block a {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1.5rem;
-  background: linear-gradient(135deg, #b22222, #ff4500);
+  background-color: #b22222;
   color: white;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 4px;
   font-weight: 600;
   font-size: 1rem;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border: 2px solid #b22222;
   transition: all 0.3s ease;
 }
 
 .service-block a:hover {
-  background: linear-gradient(135deg, #ff4500, #b22222);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  background-color: white;
+  color: #b22222;
+  border-color: #b22222;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transform: translateY(-2px);
-  opacity: 0.95;
 }
 
 /* FOOTER */
