@@ -5,6 +5,7 @@ body {
   padding: 0;
   background-color: #fff;
   color: #333;
+  overflow-x: auto; /* allows horizontal scroll on very small screens */
 }
 
 /* HEADER */
@@ -23,12 +24,14 @@ header .container {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: nowrap; /* prevents items from wrapping on smaller screens */
 }
 
 header .logo h1 {
   font-size: 28px;
   color: #b22222; /* Dark Crimson */
   margin: 0;
+  white-space: nowrap; /* prevents logo from wrapping */
 }
 
 header nav ul.nav-links {
@@ -37,6 +40,7 @@ header nav ul.nav-links {
   gap: 25px;
   margin: 0;
   padding: 0;
+  flex-wrap: nowrap; /* prevents nav links from stacking */
 }
 
 header nav ul.nav-links li a {
@@ -44,6 +48,7 @@ header nav ul.nav-links li a {
   color: #333;
   font-weight: 500;
   transition: color 0.3s;
+  white-space: nowrap; /* prevents link text wrapping */
 }
 
 header nav ul.nav-links li a:hover {
@@ -54,11 +59,13 @@ header .cta {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: nowrap; /* keeps phone and button in one row */
 }
 
 header .phone {
   font-weight: bold;
   color: #b22222; /* Dark Crimson */
+  white-space: nowrap;
 }
 
 header .btn-login {
@@ -69,6 +76,7 @@ header .btn-login {
   text-decoration: none;
   font-weight: bold;
   transition: opacity 0.3s;
+  white-space: nowrap;
 }
 
 header .btn-login:hover {
@@ -84,6 +92,7 @@ main {
 main h2 {
   font-size: 32px;
   color: #b22222; /* Dark Crimson */
+  white-space: nowrap;
 }
 
 main p {
@@ -97,39 +106,4 @@ footer {
   color: white;
   text-align: center;
   padding: 15px 0;
-}
-
-/* =====================
-   RESPONSIVE DESIGN
-===================== */
-
-/* Tablets and smaller screens */
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-
-  header nav ul.nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  header .cta {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  main {
-    padding: 20px;
-  }
-
-  main h2 {
-    font-size: 26px;
-  }
-
-  main p {
-    font-size: 16px;
-  }
 }
