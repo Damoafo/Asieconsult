@@ -1,60 +1,173 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AsieConsult - Accounting Consulting</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+/* GENERAL STYLES */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+  box-sizing: border-box;
+}
 
-  <!-- HEADER -->
-  <header>
-    <div class="container">
-      <div class="logo">
-        <img src="images/logo.jpeg" alt="AsieConsult Logo">
-        <span class="company-name">AsieConsult</span>
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Client Center</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+.container {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
 
-  <!-- HERO SECTION -->
-  <main>
-    <div class="container hero">
-      <h2>You don’t have to be an accounting expert. That’s our job.</h2>
-      <p>We guide businesses and individuals with expert financial strategies.</p>
-      <a href="#" class="btn-hero">Schedule a Consultation</a>
-    </div>
-  </main>
+/* HEADER */
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-  <!-- SERVICES SECTION -->
-  <section class="container services">
-    <div class="service-block">
-      <h3>Services for Individuals</h3>
-      <p>We guide you with strategies that help manage risk and improve performance.</p>
-      <a href="#">Learn more</a>
-    </div>
-    <div class="service-block">
-      <h3>Business Services</h3>
-      <p>We take care of your business, so you can focus on running it.</p>
-      <a href="#">Learn more</a>
-    </div>
-  </section>
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 AsieConsult | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
-    </div>
-  </footer>
+/* Logo + Company Name */
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-</body>
-</html>
+header .logo img {
+  height: 50px;
+  width: auto;
+}
+
+header .logo .company-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #b22222; /* Dark Crimson */
+}
+
+/* Navigation */
+header nav ul.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+header nav ul.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav ul.nav-links li a:hover {
+  color: #ff4500; /* Rich Orange */
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  color: #b22222;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* HERO BUTTON */
+.btn-hero {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #b22222;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  border: 2px solid #b22222;
+  transition: all 0.3s ease;
+}
+
+.btn-hero:hover {
+  background-color: white;
+  color: #b22222;
+  border-color: #b22222;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+/* SERVICES SECTION */
+.services {
+  display: flex;
+  gap: 2rem;
+  margin: 4rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-block {
+  flex: 1 1 300px;
+  background: #fff5f0;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.service-block h3 {
+  color: #b22222;
+  margin-bottom: 1rem;
+}
+
+.service-block a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #b22222;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  border: 2px solid #b22222;
+  transition: all 0.3s ease;
+}
+
+.service-block a:hover {
+  background-color: white;
+  color: #b22222;
+  border-color: #b22222;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+footer a {
+  color: #ffbf00; /* Golden Amber */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
