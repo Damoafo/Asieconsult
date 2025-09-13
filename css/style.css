@@ -17,8 +17,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1.5vw 5vw;
+  box-shadow: 0 0.5vw 1vw rgba(0,0,0,0.1);
   flex-wrap: wrap;
   background: #fff;
 }
@@ -26,24 +26,25 @@ a {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1vw;
 }
 
 .logo img {
-  height: 50px;
+  height: 4vw;
+  min-height: 40px;
 }
 
 .logo .company-name {
-  font-size: 1.5rem;
+  font-size: 2vw;
   font-weight: 700;
   color: #b22222;
+  white-space: nowrap;
 }
 
 nav ul {
   display: flex;
-  gap: 2rem;
+  gap: 2vw;
   list-style: none;
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -51,6 +52,7 @@ nav ul {
 nav ul li a {
   color: #333;
   font-weight: 500;
+  font-size: 1.2vw;
   transition: color 0.3s;
 }
 
@@ -61,100 +63,109 @@ nav ul li a:hover {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 8vw 5vw;
 }
 
 .hero h1 {
   color: #b22222;
-  margin-bottom: 1rem;
-  font-size: 2rem;
+  margin-bottom: 2vw;
+  font-size: 4vw;
 }
 
 .hero p {
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
+  margin-bottom: 4vw;
+  font-size: 1.8vw;
 }
 
 .btn-hero {
-  padding: 0.75rem 2rem;
+  padding: 1vw 3vw;
   background-color: #b22222;
   color: #fff;
-  border: 2px solid #b22222;
-  border-radius: 5px;
+  border: 0.3vw solid #b22222;
+  border-radius: 0.5vw;
   font-weight: 600;
+  font-size: 1.5vw;
   transition: all 0.3s;
 }
 
 .btn-hero:hover {
   background-color: #fff;
   color: #b22222;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transform: translateY(-2px);
+  box-shadow: 0 1vw 2vw rgba(0,0,0,0.15);
+  transform: translateY(-0.5vw);
 }
 
 /* SERVICES */
 .services {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  padding: 4rem 2rem;
+  gap: 5vw;
+  flex-wrap: nowrap; /* Do not stack */
+  padding: 8vw 5vw;
 }
 
 .service-card {
-  flex: 1 1 45%; /* responsive width */
-  max-width: 400px;
+  flex: 0 1 40%;
+  min-width: 300px;
   text-align: center;
-  padding: 2rem;
-  border-radius: 10px;
+  padding: 3vw;
+  border-radius: 1vw;
   background: #fff5f0;
 }
 
 .service-card h2 {
   color: #b22222;
-  margin-bottom: 1rem;
+  margin-bottom: 1vw;
+  font-size: 2vw;
+}
+
+.service-card p {
+  font-size: 1.2vw;
 }
 
 .service-card a {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1.5rem;
+  margin-top: 1.5vw;
+  padding: 1vw 2vw;
   background-color: #b22222;
   color: #fff;
-  border-radius: 5px;
-  border: 2px solid #b22222;
+  border-radius: 0.5vw;
+  border: 0.3vw solid #b22222;
   font-weight: 600;
+  font-size: 1.2vw;
   transition: all 0.3s;
 }
 
 .service-card a:hover {
   background-color: #fff;
   color: #b22222;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transform: translateY(-2px);
+  box-shadow: 0 1vw 2vw rgba(0,0,0,0.15);
+  transform: translateY(-0.5vw);
 }
 
 /* WHY CHOOSE US */
 .why-choose {
-  padding: 4rem 2rem;
+  padding: 8vw 5vw;
   text-align: center;
 }
 
 .why-choose h2 {
   color: #b22222;
-  margin-bottom: 1rem;
+  margin-bottom: 2vw;
+  font-size: 2.5vw;
 }
 
 .why-choose ul {
   list-style: disc;
   margin: 0 auto;
-  padding-left: 2rem;
-  max-width: 600px;
+  padding-left: 2vw;
+  max-width: 60vw;
   text-align: left;
+  font-size: 1.2vw;
 }
 
 .why-choose ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1vw;
 }
 
 /* FOOTER */
@@ -162,7 +173,8 @@ footer {
   text-align: center;
   background: #333;
   color: #fff;
-  padding: 1.5rem;
+  padding: 3vw 5vw;
+  font-size: 1.2vw;
 }
 
 footer a {
@@ -174,18 +186,40 @@ footer a:hover {
 }
 
 /* RESPONSIVE */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
+  .logo .company-name {
+    font-size: 5vw;
+  }
+  nav ul li a {
+    font-size: 4vw;
+  }
   .hero h1 {
-    font-size: 1.5rem;
+    font-size: 8vw;
   }
   .hero p {
-    font-size: 1rem;
+    font-size: 4vw;
   }
-  .service-card {
-    flex: 1 1 100%; /* stack on small screens */
+  .btn-hero {
+    font-size: 4vw;
+    padding: 2vw 4vw;
   }
-  nav ul {
-    justify-content: center;
-    gap: 1rem;
+  .service-card h2 {
+    font-size: 5vw;
+  }
+  .service-card p {
+    font-size: 3.5vw;
+  }
+  .service-card a {
+    font-size: 3.5vw;
+    padding: 2vw 4vw;
+  }
+  .why-choose h2 {
+    font-size: 6vw;
+  }
+  .why-choose ul {
+    font-size: 3.5vw;
+  }
+  footer {
+    font-size: 3.5vw;
   }
 }
