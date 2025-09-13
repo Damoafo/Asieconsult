@@ -116,7 +116,7 @@ header nav ul.nav-links li a:hover {
   gap: 2rem;
   margin: 4rem 0;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; /* center the blocks */
 }
 
 .service-block {
