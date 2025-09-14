@@ -1,234 +1,204 @@
-/* =======================
-   GENERAL STYLES
-======================= */
+/* GENERAL */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  box-sizing: border-box; /* ensures padding + borders don’t cause overflow */
 }
 
-body {
-  background-color: #fff;
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* prevents horizontal scroll */
+  font-family: Arial, sans-serif;
+  background: #fff;
   color: #333;
 }
 
-/* =======================
-   HEADER / NAVIGATION
-======================= */
-header {
+a {
+  text-decoration: none;
+}
+
+/* SITE WRAPPER */
+.site-wrapper {
+  max-width: 1200px; /* constrain width on large screens */
+  margin: 0 auto;
+  padding: 0 1%; /* small horizontal padding for mobile */
+}
+
+/* HEADER */
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2%;
-  background-color: #fff;
+  padding: 2% 0;
+  flex-wrap: wrap;
+  background: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .logo img {
-  height: 50px;
+  width: 50px;
+  height: auto;
+}
+
+.logo .company-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #b22222;
 }
 
 nav ul {
   display: flex;
+  gap: 2rem;
   list-style: none;
-  gap: 2rem;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #e63946; /* bold red accent */
-}
-
-/* =======================
-   HERO SECTION (WITH BACKGROUND IMAGE)
-======================= */
-.hero {
-  text-align: center;
-  padding: 5% 2%;
-  color: #fff;
-  background-image: url('images/background.jpg'); /* only change */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  min-height: 70vh;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.3); /* subtle overlay */
-  z-index: 1;
-}
-
-.hero h1,
-.hero p,
-.hero .btn-hero {
-  position: relative;
-  z-index: 2;
-}
-
-/* =======================
-   BUTTONS
-======================= */
-.btn-hero {
-  background: linear-gradient(90deg, #e63946, #f77f00);
-  border: none;
-  color: #fff;
-  padding: 0.75rem 2rem;
-  font-size: 1.1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: transform 0.3s;
-}
-
-.btn-hero:hover {
-  transform: scale(1.05);
-}
-
-/* =======================
-   SERVICES SECTION
-======================= */
-.services {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  padding: 5% 2%;
+  margin: 0;
+  padding: 0;
   flex-wrap: wrap;
 }
 
-.service-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 2rem;
-  border-radius: 10px;
-  width: 300px;
+nav ul li a {
+  color: #333;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  color: #b22222;
+}
+
+/* HERO */
+.hero {
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 5% 2%;
 }
 
-.service-card h3 {
+.hero h1 {
+  color: #b22222;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #e63946;
 }
 
-.service-card p {
-  font-size: 0.95rem;
+.hero p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.btn-hero {
+  padding: 0.75rem 2rem;
+  background-color: #b22222;
+  color: #fff;
+  border: 2px solid #b22222;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-hero:hover {
+  background-color: #fff;
+  color: #b22222;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+/* SERVICES */
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  padding: 5% 0;
+  flex-wrap: wrap; /* allows wrapping on very small screens */
+}
+
+.service-card {
+  flex: 1 1 45%; /* scales naturally */
+  min-width: 200px; /* ensures visibility on tiny screens */
+  text-align: center;
+  padding: 2%;
+  border-radius: 10px;
+  background: #fff5f0;
+}
+
+.service-card h2 {
+  color: #b22222;
   margin-bottom: 1rem;
 }
 
 .service-card a {
-  text-decoration: none;
-  color: #f77f00;
-  font-weight: bold;
-}
-
-/* =======================
-   FOOTER
-======================= */
-footer {
-  background: #333;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: #b22222;
   color: #fff;
-  padding: 2rem 2%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  border-radius: 5px;
+  border: 2px solid #b22222;
+  font-weight: 600;
+  transition: all 0.3s;
 }
 
-footer .footer-section {
-  flex: 1 1 200px;
+.service-card a:hover {
+  background-color: #fff;
+  color: #b22222;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+/* WHY CHOOSE US */
+.why-choose {
+  padding: 5% 2%;
+  text-align: center;
+}
+
+.why-choose h2 {
+  color: #b22222;
   margin-bottom: 1rem;
 }
 
-footer a {
-  color: #fff;
-  text-decoration: none;
-  display: block;
+.why-choose ul {
+  list-style: disc;
+  margin: 0 auto;
+  padding-left: 2rem;
+  max-width: 600px;
+  text-align: left;
+}
+
+.why-choose ul li {
   margin-bottom: 0.5rem;
 }
 
+/* FOOTER */
+footer {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 2% 0;
+  width: 100%;
+}
+
+footer a {
+  color: #ffbf00;
+}
+
 footer a:hover {
-  color: #f77f00;
+  text-decoration: underline;
 }
 
-/* =======================
-   RESPONSIVE STYLES
-======================= */
-@media screen and (max-width: 1024px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero p {
-    font-size: 1.1rem;
-  }
-
-  .services {
-    gap: 1.5rem;
-  }
-}
-
+/* RESPONSIVE SCALING METHOD */
 @media screen and (max-width: 768px) {
-  .hero {
-    padding: 8% 4%; 
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .btn-hero {
-    padding: 0.5rem 1.5rem;
-    font-size: 0.9rem;
-  }
-
-  .services {
-    justify-content: center;
+  html {
+    font-size: 90%;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .hero {
-    padding: 10% 5%;
+  html {
+    font-size: 80%;
   }
 
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
-
-  .btn-hero {
-    padding: 0.4rem 1rem;
-    font-size: 0.85rem;
-  }
-
+  /* Increase gap between cards for very small screens */
   .services {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .service-card {
-    width: 90%;
+    gap: 5%; /* added spacing so Individual and Business cards aren't touching */
   }
 }
