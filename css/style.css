@@ -94,20 +94,20 @@ nav ul li a:hover {
 
 /* SERVICES */
 .services {
-  display: flex;
-  justify-content: center;
-  gap: 2%;
-  padding: 5% 5%;
-  flex-wrap: nowrap; /* Do not stack */
+    display: flex;
+    justify-content: center; /* center the section */
+    gap: 2%;
+    padding: 5% 0; /* remove horizontal padding to prevent overflow */
+    flex-wrap: wrap; /* allow wrapping on very small screens */
 }
 
 .service-card {
-  flex: 1 1 40%;
-  min-width: 280px;
-  text-align: center;
-  padding: 2%;
-  border-radius: 10px;
-  background: #fff5f0;
+    flex: 1 1 45%; /* slightly smaller to avoid overflow */
+    min-width: 220px; /* prevents shrinking too small */
+    text-align: center;
+    padding: 2%;
+    border-radius: 10px;
+    background: #fff5f0;
 }
 
 .service-card h2 {
@@ -162,7 +162,8 @@ footer {
   text-align: center;
   background: #333;
   color: #fff;
-  padding: 2% 5%;
+  padding: 2% 0; /* remove horizontal padding */
+  width: 100%;   /* force full-width footer */
 }
 
 footer a {
@@ -173,7 +174,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* RESPONSIVE - SAME FIX USED LAST TIME */
+/* RESPONSIVE - SAME SCALING METHOD AS BEFORE */
 @media screen and (max-width: 768px) {
   html {
     font-size: 90%;
