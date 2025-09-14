@@ -1,15 +1,26 @@
 /* GENERAL */
-body {
-  font-family: Arial, sans-serif;
+* {
+  box-sizing: border-box; /* essential for padding + width scaling */
+}
+
+body, html {
   margin: 0;
   padding: 0;
-  color: #333;
+  overflow-x: hidden; /* prevents horizontal scroll */
+  font-family: Arial, sans-serif;
   background: #fff;
-  box-sizing: border-box;
+  color: #333;
 }
 
 a {
   text-decoration: none;
+}
+
+/* SITE WRAPPER */
+.site-wrapper {
+  max-width: 1200px; /* constrains width on large screens */
+  margin: 0 auto;
+  padding: 0 1%; /* small horizontal padding for mobile */
 }
 
 /* HEADER */
@@ -17,7 +28,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 5%;
+  padding: 2% 0;
   flex-wrap: wrap;
   background: #fff;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -26,12 +37,12 @@ a {
 .logo {
   display: flex;
   align-items: center;
-  gap: 1%;
+  gap: 0.5rem;
 }
 
 .logo img {
-  height: auto;
   width: 50px;
+  height: auto;
 }
 
 .logo .company-name {
@@ -61,13 +72,13 @@ nav ul li a:hover {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 5% 5%;
+  padding: 5% 2%;
 }
 
 .hero h1 {
   color: #b22222;
-  margin-bottom: 1rem;
   font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .hero p {
@@ -94,20 +105,20 @@ nav ul li a:hover {
 
 /* SERVICES */
 .services {
-    display: flex;
-    justify-content: center; /* center the section */
-    gap: 2%;
-    padding: 5% 0; /* remove horizontal padding to prevent overflow */
-    flex-wrap: wrap; /* allow wrapping on very small screens */
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  padding: 5% 0;
+  flex-wrap: wrap; /* allows wrapping on very small screens */
 }
 
 .service-card {
-    flex: 1 1 45%; /* slightly smaller to avoid overflow */
-    min-width: 220px; /* prevents shrinking too small */
-    text-align: center;
-    padding: 2%;
-    border-radius: 10px;
-    background: #fff5f0;
+  flex: 1 1 45%; /* scales naturally */
+  min-width: 200px; /* ensures visibility on tiny screens */
+  text-align: center;
+  padding: 2%;
+  border-radius: 10px;
+  background: #fff5f0;
 }
 
 .service-card h2 {
@@ -136,7 +147,7 @@ nav ul li a:hover {
 
 /* WHY CHOOSE US */
 .why-choose {
-  padding: 5% 5%;
+  padding: 5% 2%;
   text-align: center;
 }
 
@@ -162,8 +173,8 @@ footer {
   text-align: center;
   background: #333;
   color: #fff;
-  padding: 2% 0; /* remove horizontal padding */
-  width: 100%;   /* force full-width footer */
+  padding: 2% 0;
+  width: 100%;
 }
 
 footer a {
@@ -174,7 +185,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* RESPONSIVE - SAME SCALING METHOD AS BEFORE */
+/* RESPONSIVE SCALING METHOD */
 @media screen and (max-width: 768px) {
   html {
     font-size: 90%;
