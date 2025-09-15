@@ -1,12 +1,12 @@
 /* GENERAL */
 * {
-  box-sizing: border-box; /* ensures padding + borders don’t cause overflow */
+  box-sizing: border-box;
 }
 
 body, html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* prevents horizontal scroll */
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
   background: #fff;
   color: #333;
@@ -18,9 +18,9 @@ a {
 
 /* SITE WRAPPER */
 .site-wrapper {
-  max-width: 1200px; /* constrain width on large screens */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1%; /* small horizontal padding for mobile */
+  padding: 0 1%;
 }
 
 /* HEADER */
@@ -63,10 +63,19 @@ nav ul {
 nav ul li a {
   color: #333;
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: #b22222;
+  font-weight: 700;
+}
+
+/* Focus states for accessibility */
+a:focus, button:focus {
+  outline: 3px solid rgba(178,34,34,0.4);
+  outline-offset: 2px;
 }
 
 /* HERO */
@@ -109,16 +118,17 @@ nav ul li a:hover {
   justify-content: center;
   gap: 2%;
   padding: 5% 0;
-  flex-wrap: wrap; /* allows wrapping on very small screens */
+  flex-wrap: wrap;
 }
 
 .service-card {
-  flex: 1 1 45%; /* scales naturally */
-  min-width: 200px; /* ensures visibility on tiny screens */
+  flex: 1 1 45%;
+  min-width: 200px;
   text-align: center;
   padding: 2%;
   border-radius: 10px;
-  background: #fff; /* ✅ updated to match Services page look */
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .service-card h2 {
@@ -179,26 +189,27 @@ footer {
 
 footer a {
   color: #ffbf00;
+  margin: 0 0.5rem;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
-/* RESPONSIVE SCALING METHOD */
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
-  html {
-    font-size: 90%;
-  }
+  html { font-size: 90%; }
 }
 
 @media screen and (max-width: 480px) {
-  html {
-    font-size: 80%;
+  html { font-size: 80%; }
+
+  .header-container {
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
-  /* Increase gap between cards for very small screens */
   .services {
-    gap: 5%; /* added spacing so Individual and Business cards aren't touching */
+    gap: 5%;
   }
 }
