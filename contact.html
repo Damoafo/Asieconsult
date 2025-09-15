@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact Us — AsieConsult</title>
-  <link rel="stylesheet" href="css/contact.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — AsieConsult</title>
+  <link rel="stylesheet" href="css/services.css">
 </head>
 <body>
 
@@ -18,48 +18,61 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="#" class="active">Contact</a></li>
+          <li><a href="#">Client Center</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
         </ul>
-        <span class="menu-toggle">&#9776;</span>
       </nav>
+      <span class="menu-toggle">&#9776;</span>
     </div>
   </header>
 
   <main class="site-inner">
 
     <!-- Intro -->
-    <section class="contact-intro">
+    <section class="services-intro">
       <h1>Contact Us</h1>
       <p class="lead">
-        We’d love to hear from you! Reach out to discuss your accounting or business needs, and we’ll tailor a solution for you.
+        Have a question or need assistance? Fill out the form below and we’ll respond promptly.
+      </p>
+      <p>
+        You can also reach us via phone, email, or social media listed below.
       </p>
     </section>
 
-    <!-- Contact Information -->
-    <section class="contact-info">
-      <div class="info-grid">
+    <!-- Contact Form -->
+    <section class="services-catalog">
+      <div class="service-grid">
 
-        <div class="info-card">
-          <h3>Phone / WhatsApp</h3>
-          <p>0240023048 / 0503798065</p>
+        <div class="service-card">
+          <h3>Send a Message</h3>
+          <form action="#" method="post">
+            <p>
+              <label for="name">Full Name</label><br>
+              <input type="text" id="name" name="name" placeholder="Your full name" required style="width:100%;padding:8px;margin-top:4px;border-radius:4px;border:1px solid #ccc;">
+            </p>
+            <p>
+              <label for="email">Email</label><br>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required style="width:100%;padding:8px;margin-top:4px;border-radius:4px;border:1px solid #ccc;">
+            </p>
+            <p>
+              <label for="message">Message</label><br>
+              <textarea id="message" name="message" placeholder="Type your message here" required style="width:100%;padding:8px;margin-top:4px;border-radius:4px;border:1px solid #ccc;height:120px;"></textarea>
+            </p>
+            <p>
+              <button type="submit" class="btn-primary">Send Message</button>
+            </p>
+          </form>
         </div>
 
-        <div class="info-card">
-          <h3>Email</h3>
-          <p>asieconsult.gh@gmail.com</p>
-        </div>
-
-        <div class="info-card">
-          <h3>Social Media</h3>
-          <p>@asieconsult.gh</p>
+        <div class="service-card">
+          <h3>Other Contact Options</h3>
+          <p><strong>Phone / WhatsApp:</strong> 0240023048 / 0503798065</p>
+          <p><strong>Email:</strong> asieconsult.gh@gmail.com</p>
+          <p><strong>Social Media:</strong> @asieconsult.gh</p>
         </div>
 
       </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="contact-cta">
-      <p>Have questions or need a consultation? <a class="btn-primary" href="mailto:asieconsult.gh@gmail.com">Send us an Email</a></p>
     </section>
 
   </main>
@@ -78,12 +91,9 @@
 
   <script>
     // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.main-nav ul');
-
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.main-nav ul');
+    toggle.addEventListener('click', () => menu.classList.toggle('active'));
   </script>
 
 </body>
