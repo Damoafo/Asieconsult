@@ -26,7 +26,7 @@ a {
 /* HEADER */
 .header-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* logo left, nav right */
   align-items: center;
   padding: 2% 0;
   flex-wrap: wrap;
@@ -203,12 +203,7 @@ footer a:hover {
 
 @media screen and (max-width: 480px) {
   html { font-size: 80%; }
-
-  .header-container {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
+  /* Removed flex-direction: column so header stays horizontal */
   .services {
     gap: 5%;
   }
