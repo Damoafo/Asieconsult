@@ -118,7 +118,7 @@ nav ul li a:hover {
   text-align: center;
   padding: 2%;
   border-radius: 10px;
-  background: #fff5f0;
+  background: #fff; /* ✅ updated to match Services page look */
 }
 
 .service-card h2 {
