@@ -97,3 +97,16 @@ a{color:inherit;text-decoration:none}
   .main-nav ul{gap:10px}
   .ac-footer .site-inner{flex-direction:column;gap:10px;text-align:center}
 }
+
+/* RESPONSIVE SCALING (same as homepage) */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 80%;
+  }
+}
