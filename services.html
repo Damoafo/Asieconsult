@@ -23,6 +23,7 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
+      <div class="menu-toggle">☰</div>
     </div>
   </header>
 
@@ -202,6 +203,13 @@
       </div>
     </div>
   </footer>
-
+  <!-- JS for nav toggle -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.main-nav ul');
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
