@@ -1,163 +1,154 @@
-/* Base Reset */
-* {
+/* Reset */
+* { box-sizing: border-box; }
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #F5F7FA;
+  background: #F5F7FA;
   color: #333;
-  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+
+/* Layout wrapper */
+.site-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Header */
-.header-container {
+.ac-header {
+  background: #002147;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+.ac-header .site-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #002147;
-  padding: 1em 2em;
+  padding: 14px 20px;
 }
-
-.logo {
+.brand {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
-
-.logo img {
-  height: 40px;
-  margin-right: 10px;
+.brand-logo {
+  height: 44px;
+  width: auto;
 }
-
-.company-name {
-  color: #F5F7FA;
-  font-size: 1.5em;
-  font-weight: bold;
+.brand-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #F4B400;
 }
-
-nav ul {
-  list-style: none;
+.main-nav ul {
   display: flex;
-  gap: 1.5em;
+  gap: 18px;
+  list-style: none;
 }
-
-nav ul li a {
+.main-nav a {
   color: #F5F7FA;
-  text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
-
-nav ul li a:hover {
+.main-nav a.active,
+.main-nav a:hover {
   color: #F4B400;
 }
 
-/* Hero Section */
-.hero {
-  background-color: #E6F0FF;
+/* Hero */
+.about-hero {
+  background: #E6F0FF;
   text-align: center;
-  padding: 3em 1em;
+  padding: 48px 20px;
 }
-
-.hero h1 {
-  font-size: 2.5em;
+.about-hero h1 {
+  font-size: 2.4rem;
   color: #002147;
   margin-bottom: 0.5em;
 }
-
-.hero p {
-  font-size: 1.2em;
+.about-hero p {
+  font-size: 1.1rem;
   color: #555;
-  margin-bottom: 1em;
 }
 
-.btn-hero {
-  display: inline-block;
-  background-color: #F4B400;
-  color: #002147;
-  padding: 0.75em 1.5em;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+/* Intro */
+.about-intro {
+  padding: 36px 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #444;
 }
 
-.btn-hero:hover {
-  background-color: #d9a300;
+/* Mission & Vision */
+.mission-vision {
+  padding: 36px 0;
 }
-
-/* Services Section */
-.services {
+.mission-vision .site-inner {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 2em;
-  padding: 2em 1em;
-  background-color: #fff;
 }
-
-.service-card {
-  background-color: #E0ECF8;
+.mission, .vision {
+  flex: 1 1 45%;
+  background: #fff;
   padding: 1.5em;
+  border-left: 4px solid #F4B400;
   border-radius: 8px;
-  width: 300px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
-
-.service-card h2 {
+.mission h2, .vision h2 {
   color: #002147;
   margin-bottom: 0.5em;
 }
 
-.service-card a {
-  color: #F4B400;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.service-card a:hover {
-  text-decoration: underline;
-}
-
-/* Why Choose Us */
-.why-choose {
-  background-color: #F5F7FA;
-  padding: 2em 1em;
+/* Core Values */
+.core-values {
+  padding: 36px 0;
   text-align: center;
 }
-
-.why-choose h2 {
+.core-values h2 {
   color: #002147;
   margin-bottom: 1em;
 }
-
-.why-choose ul {
-  list-style: none;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0;
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1em;
 }
-
-.why-choose ul li {
-  margin-bottom: 0.75em;
-  font-weight: 500;
+.value-item {
+  background: #E0ECF8;
+  padding: 1em;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #002147;
 }
 
 /* Footer */
-footer {
-  background-color: #002147;
+.ac-footer {
+  background: #002147;
   color: #F5F7FA;
+  padding: 22px 0;
   text-align: center;
-  padding: 1em;
-  font-size: 0.9em;
 }
-
-footer a {
+.ac-footer a {
   color: #F4B400;
-  text-decoration: none;
+  font-weight: 600;
+  margin-left: 12px;
+}
+.ac-footer p {
+  margin: 0;
 }
 
-footer a:hover {
-  text-decoration: underline;
+/* Responsive */
+@media (max-width: 900px) {
+  .mission-vision .site-inner {
+    flex-direction: column;
+  }
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
 }
