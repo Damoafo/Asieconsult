@@ -20,7 +20,7 @@ a { text-decoration:none; color:inherit; }
 .about-intro h1 { color:#b22222; font-size:2.4rem; margin-bottom:10px; }
 
 /* Vision */
-.vision { background:#fbf6f4; padding:40px 20px; text-align:center; }
+.vision {padding:40px 20px; text-align:center; }
 .vision h2 { color:#b22222; margin-bottom:10px; }
 
 /* Core Values */
